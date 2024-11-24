@@ -1,0 +1,78 @@
+{
+  "layer": "bottom",
+  "position": "top",
+  "spacing": 4,
+
+  "custom/appmenu": {
+    "format": "Apps",
+    "on-click": "rofi -show drun",
+  },
+  "hyprland/window":{
+    "format": "{initialTitle}",
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+    },
+  },
+
+  "pulseaudio": {
+    "scroll-step": 1, // %, can be a float
+    "format": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+  },
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "{}% "
+  },
+  "clock": {
+    "interval": 1,
+    "format": "{:%R:%S}  ",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode"      : "month",
+      "weeks-pos"   : "left",
+      "format": {
+        "months":   "<span color='#ffffff'><b>{}</b></span>",
+        "days":     "<span color='#ffffff'><b>{}</b></span>",
+        "weeks":    "<span color='#ffffff'><b>W{}</b></span>",
+        "weekdays":   "<span color='#ffffff'><b>{}</b></span>",
+        "today":    "<span color='#ffffff'><b><u>{}</u></b></span>"
+      },
+    },
+  },
+
+  "modules-left": [
+    "custom/appmenu",
+    "hyprland/window",
+  ],
+  "modules-center": [
+    "hyprland/workspaces",
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "network",
+    "cpu",
+    "memory",
+    "clock",
+  ],
+}
