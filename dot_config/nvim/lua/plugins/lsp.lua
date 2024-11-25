@@ -109,6 +109,7 @@ return {
           settings = {
             basedpyright = {
               analysis = {
+                typeCheckingMode = "off",
                 diagnosticSeverityOverrides = {
                   reportUnusedImport = "unused",
                   reportUnusedClass = "unused",
