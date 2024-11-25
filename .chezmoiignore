@@ -1,5 +1,11 @@
 .git/
 
+{{- if ne .chezmoi.hostname "thunderdome" }}
+~/.config/hypr
+~/.config/waybar
+~/.config/home-manager
+{{- end }}
+
 {{- if ne .chezmoi.hostname "Gauthams-MacBook-Air" }}
 ~/.config/espanso
 ~/.config/kanata
