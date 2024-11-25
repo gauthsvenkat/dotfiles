@@ -106,15 +106,16 @@ return {
 
       ["basedpyright"] = function()
         require("lspconfig").basedpyright.setup({
-          basedpyright = {
-            analysis = {
-              typeCheckingMode = "off",
-              diagnosticSeverityOverrides = {
-                reportUnusedImport = "unused",
-                reportUnusedClass = "unused",
-                reportUnusedFunction = "unused",
-                reportUnusedVariable = "unused",
-                reportUnusedParameter = "unused",
+          settings = {
+            basedpyright = {
+              analysis = {
+                diagnosticSeverityOverrides = {
+                  reportUnusedImport = "unused",
+                  reportUnusedClass = "unused",
+                  reportUnusedFunction = "unused",
+                  reportUnusedVariable = "unused",
+                  reportUnusedParameter = "unused",
+                },
               },
             },
           },
