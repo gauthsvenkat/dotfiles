@@ -7,23 +7,23 @@ matches:
         params:
           format: "%Y/%m/%d"
   - trigger: ":s-yday"
-    replace: "{{start}}"
+    replace: "{{start_yesterday}}"
     vars:
-      - name: start
+      - name: start_yesterday
         type: shell
         params:
           cmd: ~/.config/espanso/match/start_of.py yesterday
   - trigger: ":s-today"
-    replace: "{{start}}"
+    replace: "{{start_today}}"
     vars:
-      - name: start
+      - name: start_today
         type: shell
         params:
           cmd: ~/.config/espanso/match/start_of.py today
   - trigger: ":s-tomo"
-    replace: "{{start}}"
+    replace: "{{start_tomorrow}}"
     vars:
-      - name: start
+      - name: start_tomorrow
         type: shell
         params:
           cmd: ~/.config/espanso/match/start_of.py tomorrow
