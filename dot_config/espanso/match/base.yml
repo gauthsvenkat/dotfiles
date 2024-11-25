@@ -1,0 +1,29 @@
+matches:
+  - trigger: ":todate"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y/%m/%d"
+  - trigger: ":s-yday"
+    replace: "{{start}}"
+    vars:
+      - name: start
+        type: shell
+        params:
+          cmd: ~/.config/espanso/match/start_of.py yesterday
+  - trigger: ":s-today"
+    replace: "{{start}}"
+    vars:
+      - name: start
+        type: shell
+        params:
+          cmd: ~/.config/espanso/match/start_of.py today
+  - trigger: ":s-tomo"
+    replace: "{{start}}"
+    vars:
+      - name: start
+        type: shell
+        params:
+          cmd: ~/.config/espanso/match/start_of.py tomorrow

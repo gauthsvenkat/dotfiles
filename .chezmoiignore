@@ -1,0 +1,7 @@
+.git/
+
+{{- if ne .chezmoi.hostname "Gauthams-MacBook-Air" }}
+~/.config/espanso
+~/.config/kanata
+~/.config/nix-darwin
+{{- end }}
