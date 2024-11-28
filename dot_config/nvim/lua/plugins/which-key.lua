@@ -41,6 +41,10 @@ return {
       { "<Tab>", cmd("bnext"), desc = "Buffer next" },
       { "<S-Tab>", cmd("bprevious"), desc = "Buffer previous" },
 
+      -- Tab navigation
+      { "<C-n>", cmd("tabnext"), desc = "Tab next" },
+      { "<C-b>", cmd("tabprevious"), desc = "Tab previous" },
+
       -- Leader mappings
       { "<leader>b", group = "[b]uffer" },
       { "<leader>bn", cmd("bnext"), desc = "[n]ext" },

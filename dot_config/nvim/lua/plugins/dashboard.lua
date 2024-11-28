@@ -10,8 +10,9 @@ return {
       },
       shortcut = {
         { desc = "Lazy", group = "@property", action = "Lazy", key = "l" },
-        { desc = "Files", group = "Label", action = "Telescope find_files", key = "f", icon = " " },
-        { desc = "Grep", group = "Label", action = "Telescope live_grep", key = "g", icon = " " },
+        { desc = "Files", group = "Label", action = "Telescope find_files", key = "f" },
+        { desc = "Grep", group = "Label", action = "Telescope live_grep", key = "g" },
+        { desc = "Quit", group = "Label", action = "quit", key = "q" },
       },
     },
   },

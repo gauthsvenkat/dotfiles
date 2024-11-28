@@ -26,9 +26,7 @@ return {
       "sindrets/diffview.nvim",
       "nvim-telescope/telescope.nvim",
     },
-    opts = {
-      kind = "floating",
-    },
+    opts = {},
     keys = {
       { "<leader>gg", cmd("Neogit"), desc = "neo[g]it" },
     },
