@@ -93,6 +93,7 @@ return {
       "lua_ls",
       "basedpyright",
       "nil_ls",
+      "rust_analyzer",
     },
     handlers = {
       -- NOTE: Default handler is disabled since
@@ -136,6 +137,9 @@ return {
             },
           },
         })
+      end,
+      ["rust_analyzer"] = function()
+        require("lspconfig").rust_analyzer.setup({})
       end,
     },
   },

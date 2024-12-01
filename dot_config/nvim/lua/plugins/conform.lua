@@ -12,10 +12,11 @@ return {
         "ruff_format",
         "ruff_organize_imports",
       },
+      rust = { "rustfmt" },
     },
   },
   config = function(_, opts)
-    ensure_installed({ "stylua", "ruff" })
+    ensure_installed({ "stylua", "ruff", "rustfmt" })
     require("conform").setup(opts)
   end,
   cmd = { "ConformInfo" },
