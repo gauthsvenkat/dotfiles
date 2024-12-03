@@ -18,7 +18,6 @@
       hurl
       uv
       poetry
-      google-cloud-sdk
       nixfmt-rfc-style
       hoppscotch
       ttyper

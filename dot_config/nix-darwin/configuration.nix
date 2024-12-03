@@ -23,6 +23,7 @@
     casks = [
       "wezterm"
       "nikitabobko/tap/aerospace"
+      "google-cloud-sdk"
     ];
   };
 
