@@ -139,7 +139,15 @@ return {
         })
       end,
       ["rust_analyzer"] = function()
-        require("lspconfig").rust_analyzer.setup({})
+        require("lspconfig").rust_analyzer.setup({
+          settings = {
+            ["rust-analyzer"] = {
+              checkOnSave = {
+                command = "clippy",
+              },
+            },
+          },
+        })
       end,
     },
   },
