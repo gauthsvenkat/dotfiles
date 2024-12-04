@@ -22,6 +22,7 @@ in
       cmake
       nodejs
       rustup
+      cargo-generate
       xclip
       cue
       nix-output-monitor

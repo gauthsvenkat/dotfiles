@@ -13,6 +13,7 @@
       cmake
       nodejs
       rustup
+      cargo-generate
       xclip
       cue
       hurl
