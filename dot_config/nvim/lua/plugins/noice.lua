@@ -5,6 +5,7 @@ return {
   event = "VeryLazy",
   dependencies = {
     "MunifTanjim/nui.nvim",
+    "rcarriga/nvim-notify",
     "nvim-telescope/telescope.nvim",
   },
   opts = {
