@@ -17,9 +17,8 @@ return {
     keymaps = {
       ["h"] = "actions.parent",
       ["l"] = "actions.select",
-      ["."] = "actions.toggle_hidden",
-      ["<BS>"] = "actions.parent",
-      ["<Esc>"] = "actions.close",
+      ["H"] = "actions.toggle_hidden",
+      ["<CR>"] = "actions.close",
       ["<C-j>"] = { "actions.select", opts = { horizontal = true }, desc = "Open entry in horizontal window" },
       ["<C-l>"] = { "actions.select", opts = { vertical = true }, desc = "Open entry in vertical window" },
     },
