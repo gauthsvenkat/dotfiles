@@ -21,7 +21,7 @@ return {
     },
   },
   keys = {
-    { "<leader>nd", cmd("Noice dismiss"), desc = "[d]ismiss" },
+    { "<leader>nn", cmd("Noice dismiss"), desc = "dismiss" },
     { "<leader>nm", cmd("Noice telescope"), desc = "[m]essages" },
   },
 }

@@ -39,35 +39,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     bind_if("textDocument/rename", "<leader>lr", vim.lsp.buf.rename, "[r]ename")
     bind_if("textDocument/documentSymbol", "<leader>ls", telescope.lsp_document_symbols, "document [s]ymbols")
 
-    -- Keybind to toggle live references highlight. Works by creating and removing autocommands
-    -- on CursorHold and CursorMoved events.
-    bind_if("textDocument/documentHightlight", "<leader>lt", function()
-      local augroup_name = "LSPReferenceHighlight"
-      -- Do a protected call to check if the augroup exists. If it does, we
-      -- get a bunch of tables. Otherwise it throw an error which we promptly
-      -- ignore with the pcall.
-      local enabled, _ = pcall(vim.api.nvim_get_autocmds, { group = augroup_name })
-
-      if not enabled then
-        local group = vim.api.nvim_create_augroup(augroup_name, {})
-
-        vim.api.nvim_create_autocmd({ "CursorHold", "CursorholdI" }, {
-          group = group,
-          buffer = args.buf,
-          callback = vim.lsp.buf.document_highlight,
-        })
-
-        vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
-          group = group,
-          buffer = args.buf,
-          callback = vim.lsp.buf.clear_references,
-        })
-      else
-        vim.api.nvim_del_augroup_by_name(augroup_name)
-        vim.lsp.buf.clear_references()
-      end
-    end, "highligh[t] references")
-
     bind_if("textDocument/inlayHint", "<leader>ly", function()
       vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = buffer }))
     end, "inla[y] hints")

@@ -49,7 +49,7 @@ return {
       { "<leader>b", group = "[b]uffer" },
       { "<leader>bn", cmd("bnext"), desc = "[n]ext" },
       { "<leader>bp", cmd("bprevious"), desc = "[p]revious" },
-      { "<leader>bd", cmd("bd"), desc = "[d]elete" },
+      -- { "<leader>bd", cmd("bd"), desc = "[d]elete" },
       { "<leader>bi", "gg=G", desc = "[i]ndent" },
 
       { "<leader>c", group = "[c]omment", mode = { "n", "v" } },
