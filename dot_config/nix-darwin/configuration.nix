@@ -21,6 +21,7 @@
       "veeso/termscp/termscp"
     ];
     casks = [
+      "neovide"
       "wezterm"
       "nikitabobko/tap/aerospace"
       "google-cloud-sdk"
