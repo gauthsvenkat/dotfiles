@@ -67,6 +67,9 @@ return {
 
       { "<leader>n", group = "[n]oice" },
 
+      { "<leader>o", "o<Esc>k", desc = "Insert newline below" },
+      { "<leader>O", "O<Esc>j", desc = "Insert newline above" },
+
       { "<leader>p", group = "[p]lugins" },
       { "<leader>pl", cmd("Lazy"), desc = "[l]azy" },
 
